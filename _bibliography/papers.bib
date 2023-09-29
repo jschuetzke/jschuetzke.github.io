@@ -3,82 +3,123 @@
 
 @string{aps = {American Physical Society,}}
 
-@book{einstein1956investigations,
+@article{schuetzke_2021,
+  abbr={IUCrJ},
+  title={Enhancing deep-learning training for phase identification in powder X-ray diffractograms},
+  author={Schuetzke, J. and Benedix, A. and Mikut, R. and Reischl, M.},
+  journal={IUCrJ},
+  year={2021},
+  volume={8},
+  pages={408--420},
+  publisher = {IUCr},
   bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
-}
-
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
-}
-
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein, A. and Podolsky, B. and Rosen, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
+  altmetric={true},
   dimensions={true},
+  doi={10.1107/s2052252521002402},
+  html={https://journals.iucr.org/m/issues/2021/03/00/fc5051/index.html},
+  abstract={Within the domain of analyzing powder X-ray diffraction (XRD) scans, manual examination of the recorded data is still the most popular method, but it requires some expertise and is time consuming. The usual workflow for the phase-identification task involves software for searching databases of known compounds and matching lists of d spacings and related intensities to the measured data. Most automated approaches apply some iterative procedure for the search/match process but fail to be generally reliable yet without the manual validation step of an expert. Recent advances in the field of machine and deep learning have led to the development of algorithms for use with diffraction patterns and are producing promising results in some applications. A limitation, however, is that thousands of training samples are required for the model to achieve a reliable performance and not enough measured samples are available. Accordingly, a framework for the efficient generation of thousands of synthetic XRD scans is presented which considers typical effects in realistic measurements and thus simulates realistic patterns for the training of machine- or deep-learning models. The generated data set can be applied to any machine- or deep-learning structure as training data so that the models learn to analyze measured XRD data based on synthetic diffraction patterns. Consequently, we train a convolutional neural network with the simulated diffraction patterns for application with iron ores or cements compounds and prove robustness against varying unit-cell parameters, preferred orientation and crystallite size in synthetic, as well as measured, XRD scans.}
+}
+
+@article{synthetic_benchmark,
+  abbr={npj Compu-Mats.},
+  title={Validating neural networks for spectroscopic classification on a universal synthetic dataset},
+  author={Schuetzke, J. and Szymanski, N. J. and Reischl, M.},
+  journal={npj Computational Materials},
+  volume={9},
+  number={1},
+  pages={100},
+  year={2023},
+  altmetric={true},
+  dimensions={true},
+  doi={10.1038/s41524-023-01055-y},
+  html={https://www.nature.com/articles/s41524-023-01055-y},
+  publisher={Nature Publishing Group UK London},
+  bibtex_show={true},
   selected={true}
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@book{przibram1967letters,
+@article{schuetzke_2023,
+  title={Accelerating Materials Discovery: Automated Identification of Prospects from {XRD} Data in Fast Screening Experiments},
+  author={Schuetzke, J. and Schweidler, S. and M\"unke, F. R. and Orth, A. and Khandelwal, A. D. and Breitung, B. and Aghassi-Hagmann, J. and Reischl, M.},
+  journal={Advanced Intelligent Systems (submitted)},
+  year={2023},
   bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif}
+}
+
+@article{sheshachala_2023_charge,
+  title={Charge controlled interactions between DNA-modified silica nanoparticles and fluorosurfactants in microfluidic water-in-oil droplets},
+  author={Sheshachala, S. and Huber, B. and Schuetzke, J. and Mikut, R. and Scharnweber, T. and Dom{\'\i}nguez, C. M. and Mutlu, H. and Niemeyer, C. M.},
+  journal={Nanoscale Advances},
+  volume={5},
+  number={15},
+  pages={3914--3923},
+  year={2023},
+  publisher={Royal Society of Chemistry},
+  bibtex_show={true},
+}
+
+@article{muenke_2023_cipp,
+  title={A {Review} of {Adaptable} {Conventional} {Image} {Processing} {Pipelines} and {Deep} {Learning} on limited {Datasets}},
+  author={M\"unke, F. R. and Schuetzke, J. and Berens, F. and Reischl, M.},
+  journal={Machine Vision and Applications (submitted)},
+  year={2023},
+  publisher={Springer Nature},
+  bibtex_show={true},
+}
+
+@article{xuan_2023_spinel,
+  title={Using the high entropy approach to obtain improved multi-metal oxide-based nanozymes: {High-throughput} synthesis, in silico structure activity analysis and feasibility in biomedical applications},
+  author={Xuan, T. P. and Schweidler, S. and Hirte, S. and Sch\"uller, M. and Lin, L. and Khandelwal, A. D. and Wang, K. and Schuetzke, J. and Reischl, M. and K\"ubele, C. and others}, 
+  journal={Nature Catalysis (submitted)},
+  year={2023},
+  publisher={Springer Nature},
+  bibtex_show={true},
+}
+
+@inproceedings{schuetzke_siamese_2020,
+	title = {Siamese {Networks} for {1D} {Signal} {Identification}},
+	booktitle = {Proceedings 30. {Workshop} {Computational} {Intelligence}, Berlin, Germany, November 26-27, 2020},
+  address = {Karlsruhe, Germany},
+	publisher = {KIT Scientific Publishing},
+	author = {Schuetzke, J. and Benedix, A. and Mikut, R. and Reischl, M.},
+	year = {2020},
+	pages = {17--31},
+  doi = {10.5445/IR/1000127715},
+  html={https://dx.doi.org/10.5445/IR/1000127715},
+  abstract={In material sciences, X-ray diffraction (XRD) or nuclear magnetic response (NMR) are methods to generate one-dimensional signals, describing intensities over an angle or a chemical shift. Each material has a characteristic profile and unknown samples are typically matched to known references. Automatic classification of one-dimensional signal patterns is a non-trivial task due to background noise and varying positions of measured intensities in identical probes. Convolutional Neural Networks prove to be particularly suitable, a limitation, though, is that adding new classes requires retraining. However, continuous discovery of new materials requires possibilities for easy class-extension. Siamese Neural Networks are able to extend data set classes easily and are popular in the field of face recognition, where new faces are constantly added to the database of references. In this paper, we apply Siamese networks to one-dimensional XRD-data for the first time and discuss the opportunities and challenges as well as areas of application. We show that Siamese networks are well suited for the transfer between XRD datasets, achieving an accuracy of 99\% for materials not present in the training dataset.}
+}
+
+@inproceedings{schuetzke_dxc_2020,
+	title = {Application of {Machine} {Learning} to {XRD} {Phase} {Identification}},
+	author = {Schuetzke, J. and Jones, B. and Henderson, N. and Rodesney, N. and Benedix, A. and Knorr, K. and Mikut, R. and Reischl, M.},
+  month = {August},
+	year = {2020},
+  booktitle = {Denver X-Ray Conference},
+  address = {Denver, CO, USA},
+  doi = {10.5445/IR/1000127718},
+  html={https://dx.doi.org/10.5445/IR/1000127718},
+  poster={DXC2020_DL_PhaseID.pdf},
+  abstract={Identification of crystalline phases in mixtures is a frequently performed task in powder XRD. It mostly involves software for searching databases of known compounds, and matching lists of d-spacings and related intensities to the measured (or reduced) data. Figures-of-merit are usually taken as numerical indicators for the probability of the individual phase assignments. However, some expertise of the skilled user is still required for a “manual” validation of the results. This is time-consuming and error prone. Most automated search/match procedures that apply some iterative procedure of the above aim at making the validation step redundant but have failed to be generally reliable to this point. In recent years, deep learning models established their status as a state-of-the-art approach for automated image analysis, such as detecting cars and pedestrians in a street scene. In analogy, deep learning models were applied here for automated phase identification from one-dimensional XRD data. We used phases and mixtures from the Bruker AXS iron ore and cement application packages that are in wide commercial use and contain 28 and 76 phases, respectively. Several models have been tested, which learn the peculiarities of XRD data to support the automated phase identification process. A framework for the efficient generation of hundreds of thousands of simulated scans has been developed, since real measured and labeled scans are only scarcely available, and deep learning approaches require an extensive dataset to learn a general representation. This learning step considered not only varying phase presence and concentrations but noise, background variation, peak broadening as well as variance in lattice parameters. The trained networks achieve an accuracy of close to 100\% for synthetic mixtures of both application packages while analyzing hundreds of scans in under a second, thus outperforming the experts in speed without sacrificing an accurate prediction. Additionally, the models have been tested on measured XRD scans to confirm the results.}
+}
+
+@inproceedings{schuetzke_dxc_2022,
+	title = {A {Critical} {Review} of {Neural} {Networks} for the {Identification} of {Powder} {X-ray} {Diffraction} {Patterns}},
+	author = {Schuetzke, J. and Szymanski, N. J. and Reischl, M.},
+  month = {August},
+	year = {2022},
+  booktitle = {Advances in X-ray Analysis, {Proceedings} of the {Denver} {X-ray} {Conference}},
+  address = {Rockville, MD, USA},
+}
+
+@inproceedings{schuetzke_ecm_2022,
+	title = {A {Critical} {Review} of {Neural} {Networks} for the {Use} with {Spectroscopic} {Data}},
+	author = {Schuetzke, J. and Szymanski, N. J. and Ceder, G. and Reischl, M.},
+  month = {August},
+	year = {2022},
+  booktitle = {European Crystallographic Meeting (ECM)},
+  address = {Versailles, France},
+  doi = {10.5445/IR/1000151442},
+  html={https://dx.doi.org/10.5445/IR/1000151442},
+  slides={ecm_schuetzke_cnn_review.pdf},
+  abstract={In recent years, neural networks have found increased use in the analysis of crystallographic characterization data, such as X-ray diffraction (XRD) patterns. Previous work has shown that neural networks can successfully identify crystalline phases from XRD patterns and classify their symmetry, even in multiphase mixtures. When compared with classical machine learning methods, such as Support Vector Machines or Decision Trees, CNNs show improved performance in the classification of XRD patterns and can even handle experimental artifacts such as peak shifts caused by strain, whereas the classification models would fail. Such an approach is readily extended to other spectroscopic techniques, including NMR, Raman or NIR. Those network models usually employ a convolutional neural network (CNN) architecture which has been developed for the use with images. Despite these promising results, our work reveals several key limitations of the CNN architecture with respect to spectroscopic analysis, and we show that these limitations can lead to failed classifications on relatively simple patterns. Convolutional layers are demonstrated to have very little benefit for classification, and their only important contribution comes from the pooling operations that shrink the size of the input while keeping relevant information regarding peak intensities. Those pooling operations compensate for peak shifts, and therefore classical models applied to the shrunken input perform equally well as the presented neural networks. Nonetheless, we show how to adapt various parameters in the neural networks, such as the choice of activation function, to train more robust models with improved accuracy on classification tasks. Based on our findings, we believe that neural networks have their place for use with spectroscopic data but require careful design of their architecture to handle peculiarities inherent to spectral data.}
 }

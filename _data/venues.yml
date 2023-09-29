@@ -1,6 +1,7 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
+"npj Compu-Mats.":
+  url: https://www.nature.com/npjcompumats/
   color: "#00369f"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"IUCrJ":
+  url: https://journals.iucr.org/m/
+  color: "#00369f"

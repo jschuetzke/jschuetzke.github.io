@@ -1,12 +1,7 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - jschuetzke
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - jschuetzke/python-powder-diffraction
+  - jschuetzke/speedscreen-xrd
+  - jschuetzke/synthetic-spectra-benchmark
