@@ -2,9 +2,9 @@
   type: map
   contents:
     - name: Full Name
-      value: Jan Schützke
+      value: Albert Einstein
     - name: Date of Birth
-      value: 1st August 1994
+      value: 14th March 1879
     - name: Languages
       value: English, German
 

@@ -50,6 +50,12 @@ table.table a {
 
 .table-dark {
   background-color: transparent;
+<<<<<<< HEAD
+=======
+  &.table-bordered{
+    border: 1px solid var(--global-divider-color) !important;
+  }
+>>>>>>> tags/v0.10.0
 }
 
 figure,
@@ -117,7 +123,11 @@ blockquote {
 .profile {
   width: 100%;
 
+<<<<<<< HEAD
   .address {
+=======
+  .more-info {
+>>>>>>> tags/v0.10.0
     margin-bottom: 5px;
     margin-top: 5px;
     font-family: monospace;

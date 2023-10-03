@@ -2,22 +2,25 @@
 layout: about
 title: about
 permalink: /
-subtitle: <b>ML Research</b> @ Karlsruhe Institute of Technology
+subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: true # crops the image to make it circular
+  image_circular: false # crops the image to make it circular
+  more_info: >
+    <p>555 your office number</p>
+    <p>123 your address street</p>
+    <p>Your City, State 12345</p>
 
-news: false  # includes a list of news items
-latest_posts: false  # includes a list of the newest posts
+news: true  # includes a list of news items
+latest_posts: true  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Working on the automation of diffraction or spectroscopy data analysis. Instead of relying on manual preprocessing steps, figure-of-merit based matching or peak shape approximating procedures, let a neural network do the analysis.
+Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
-While I started studing *Mechanical Engineering* at [Karlsruhe Institute of Technology](https://kit.edu) due to my interest in applied physics (rollercoasters, robots and simple machines that have often been realized using Legos), my interest in *Computer Science* mainly grew due to the simplicity of writing and understanding Python code. Libraries such as pyspotify (RIP) gave me a reason to experiment with code-snippets in my free time... now I'm writing code full time.
+Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
 
-After an internship focused on the organization of data from sensor manufacturing and attending machine learning classes, my career was set. I started as a student researcher at the [Institute for Automation and Applied Informatics (IAI)](https://iai.kit.edu) and developed a proof-of-concept model for detection of synapses in microscopy images using the Tensorflow Object Detection API (discontinued). For my Master's thesis, [Bruker AXS GmbH](https://www.bruker.com/en/landingpages/baxs/x-ray-structural-and-elemental-analysis.html) had an interesting idea: Is it possible to detect mineral phases in X-ray powder diffraction scans from multi-compound samples using a neural network? Answers to this question and more can be found in the projects and publication pages on this site.
-
+Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
