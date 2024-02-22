@@ -2,7 +2,7 @@
 layout: page
 permalink: /repositories/
 title: repositories
-description: Overview of open-source projects that I have been created and worked on over the years.
+description: Overview of open-source projects.
 nav: false
 nav_order: 3
 ---
