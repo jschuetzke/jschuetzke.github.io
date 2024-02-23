@@ -124,6 +124,13 @@ blog_name: Blog # blog_name will be displayed in your blog page
 blog_description: Posts made by me (Jan Schützke) several topics
 permalink: /blog/:year/:title/
 
+# Pagination
+pagination:
+  enabled: true
+
+related_blog_posts:
+  enabled: true
+  max_related: 5
 
 # -----------------------------------------------------------------------------
 # Collections
