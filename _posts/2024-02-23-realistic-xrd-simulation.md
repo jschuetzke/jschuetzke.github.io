@@ -5,6 +5,7 @@ date: 2024-02-23 10:05:00+0100
 description: A quick guide to explain the python-powder-diffraction package
 tags: python xrd simulation
 categories: guides
+thumbnail: assets/img/xrd-sim-thumbnail.png
 giscus_comments: False
 related_posts: false
 toc:
@@ -33,6 +34,8 @@ The signal displays multiple peaks (e.g., at positions 27, 36, and 54 degrees $$
 
 While the RRUFF database offers measured XRD patterns for certain minerals, the data extracted from these diffraction patterns is generally stored in a condensed format. Databases like the [COD](https://www.crystallography.net/cod/) or the [ICSD](https://icsd.fiz-karlsruhe.de/) have thousands of entries, containing comprehensive information on chemical composition and crystal structure arrangement. These databases also offer the option to download the structural information, often in the form of _crystallographic information files_ ([CIFs](https://www.iucr.org/resources/cif/documentation)), which allows researchers to utilize the data for subsequent analysis and simulations.
 
+----
+
 ## Pattern Simulation
 
 Utilizing the condensed information, calculating the corresponding positions and intensities of diffraction peaks for a given structure becomes a straightforward process. Therefore, this method has been incorporated into numerous software packages, including those designed for the Search/Match procedure and various scientific applications. For the purposes of this post, the implementation provided by [_pymatgen_](https://pymatgen.org/) is utilized, though alternative options such as [_cctbx_](https://cctbx.github.io/) are also available. An overview of commercial and free-to-use Search/Match software is given [here](http://www.ccp14.ac.uk/solution/search-match.htm).
@@ -51,7 +54,7 @@ First, read the CIF. The _pymatgen_ modules interpret this information and repre
 
 ```python
 from pymatgen.core import Structure
-struct = Structure.from_file('/home/jan/Downloads/9015662.cif')
+struct = Structure.from_file('Downloads/9015662.cif')
 print(struct)
 ```
 ```
@@ -112,3 +115,60 @@ from scipy.ndimage import gaussian_filter1d
 signal = gaussian_filter1d(signal, 10., mode="constant")
 ```
 {% include figure.html path="assets/img/xrd-sim-convolved.png" class="img-fluid rounded z-depth-1" zoomable=true %} 
+
+What is missing now? Mostly the noise and background intensities found in measured signals. In most Search/Match applications, background is modeled through Chebyshev polynomials and noise can be added through random sampling of values from a normal distribution (white noise). Both procedures are straightforward to accomplish in Python:
+
+```python
+coefs = [0., 0., 0., 0.] # coefficients for Chebyshev polynomial
+chebyshev = np.polynomial.chebyshev.Chebyshev(ccoefs)
+# evaluate the polynomial according to the measurement steps
+background = chebyshev.linspace(steps.size)[1]
+
+# set seed for reproducability
+rng = np.random.default_rng(2024)
+noise = rng.normal(0, 0.033, steps.size)
+
+# add to signal, background not needed here
+signal += noise
+```
+{% include figure.html path="assets/img/xrd-sim-noise.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+
+## Python-Powder-Diffraction
+
+### Exemplary Use
+
+Instead of manually implementing the code described above, an artificial diffraction pattern can also be generated using the [_python-powder-diffraction_](https://github.com/jschuetzke/python-powder-diffraction/) package:
+
+```python
+from powdiffrac import Powder
+from powdiffrac.simulation import generate_noise
+powder = Powder.from_cif('Downloads/9015662.cif')
+signal = powder.get_signal()
+signal = generate_noise(signal)
+```
+
+### Pattern Variation
+
+Although the generated XRD pattern looks visually similar to the measured signal, minor disparities persist. Firstly, there are slight deviations in peak positions attributable to a mismatch in lattice parameters. Secondly, certain simulated intensity peaks exceed the intensities observed in the measured data. Thirdly, disparities are evident in the shapes of peaks. Nonetheless, such deviations have to be expected in measured diffraction patterns.
+
+The _Powder_ object furthermore includes functionality to generate varied signals. For example, the following code generates a pattern with varied peak positions, intensities, and shapes.
+
+```python
+powder = Powder.from_cif(
+    'Downloads/9015662.cif',
+    two_theta = (5.,90.),
+    max_strain = 0.04, # position variation
+    max_texture = 0.6, # intensity variation
+    min_domain_size = 10, # minimum grain size 10nm
+    max_domain_size = 50, # maximum grain size 100nm
+    peak_shape: str = "lorentzian", # desired peak shapes
+    vary_strain = True,
+    vary_texture = True,
+    vary_domain = True,
+    seed = 2024
+)
+signal = powder.get_signal(vary=True)
+signal = generate_noise(signal)
+```
+
+{% include figure.html path="assets/img/xrd-sim-varied.png" class="img-fluid rounded z-depth-1" zoomable=true %}
