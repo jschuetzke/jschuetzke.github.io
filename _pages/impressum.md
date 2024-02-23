@@ -9,8 +9,8 @@ nav_order: 3
 
 # Contact
 
-Jan Schützke\n
-Luise-Riegger-Str. 27\n
+Jan Schützke\
+Luise-Riegger-Str. 27\
 76137 Karlsruhe
 
 Email: schuetzkejan (at) gmail (dot) com
