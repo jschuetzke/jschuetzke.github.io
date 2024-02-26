@@ -5,7 +5,7 @@ date: 2024-02-26 11:55:00+0100
 description: A guide to instruct and demonstrate how neural networks can be employed for automatic phase identification in powder XRD patterns.
 tags: python xrd classification
 categories: guides
-thumbnail: 
+thumbnail: assets/img/xrd-class-thumbnail.png
 giscus_comments: False
 related_posts: false
 toc:
