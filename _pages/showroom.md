@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 permalink: /showroom/
 title: showroom
 nav: true
